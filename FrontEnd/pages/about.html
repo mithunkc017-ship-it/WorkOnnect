@@ -1,0 +1,1575 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the Workonnect vision.">
+        <title>About | Workonnect</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+        <header class="navbar" id="siteHeader">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo">
+                    <span class="logo-icon">W</span>
+                    <span>Work<span>Onnect</span>
+                    </span>
+                </a>
+                <nav class="nav-menu" id="navLinks">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="register.html" class="register-btn">Get Started <span>→</span>
+                    </a>
+                </nav>
+                <button class="menu-btn" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                    <span>
+                    </span>
+                    <span>
+                    </span>
+                    <span>
+                    </span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="page-hero">
+                <div class="container">
+                    <p class="page-kicker">03 / WHY WORKONNECT</p>
+                    <h1>Work is human.<br>
+                        <span>Connection helps.</span>
+                    </h1>
+                    <p>We are building a calmer, clearer way for customers and skilled professionals to find each other and do their best work.</p>
+                </div>
+            </section>
+            <section class="page-content">
+                <div class="container">
+                    <div class="content-intro reveal">
+                        <div>
+                            <p class="section-label">THE IDEA</p>
+                            <h2>A better local<br>
+                                <span>network.</span>
+                            </h2>
+                        </div>
+                        <p>Workonnect is designed around a simple belief: access to good work should feel more personal, more transparent, and more useful than a list of search results.</p>
+                    </div>
+                    <div class="quote-panel reveal">
+                        <p>“The right connection can turn a task into momentum, and a service into a relationship.”</p>
+                        <span>THE WORKONNECT PRINCIPLE</span>
+                    </div>
+                    <div class="page-card-grid" style="margin-top:16px">
+                        <article class="page-card reveal">
+                            <span class="card-number">01 / CLARITY</span>
+                            <h3>Keep it human</h3>
+                            <p>Profiles and requests should help people understand one another, not hide behind jargon.</p>
+                        </article>
+                        <article class="page-card dark reveal">
+                            <span class="card-number">02 / TRUST</span>
+                            <h3>Show the signal</h3>
+                            <p>Useful details, real expectations, and thoughtful feedback make better decisions possible.</p>
+                        </article>
+                        <article class="page-card reveal">
+                            <span class="card-number">03 / MOMENTUM</span>
+                            <h3>Make progress</h3>
+                            <p>The best platform is the one that helps people move from intention to action.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <div class="container footer-container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="../index.html" class="logo">
+                            <span class="logo-icon">W</span>
+                            <span>Work<span>Onnect</span>
+                            </span>
+                        </a>
+                        <p>Local skill. Clear connection.<br>Better work, together.</p>
+                    </div>
+                    <div class="footer-nav">
+                        <div>
+                            <small>EXPLORE</small>
+                            <a href="../index.html">Home</a>
+                            <a href="services.html">Services</a>
+                            <a href="how-it-works.html">How It Works</a>
+                        </div>
+                        <div>
+                            <small>ACCOUNT</small>
+                            <a href="login.html">Login</a>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2026 WorkOnnect</span>
+                    <span>Find the right connection.</span>
+                </div>
+            </div>
+        </footer>
+        <script src="../assets/js/main.js">
+        </script>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn about WorkOnnect and discover talented workers through our Worker Showcase."
+    >
+
+    <title>About | WorkOnnect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        /* =====================================================
+           ABOUT PAGE
+        ===================================================== */
+
+       .about-page {
+    background: #fafaf5;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .about-hero {
+            position: relative;
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 110px 0 90px;
+            background:
+                radial-gradient(circle at 85% 20%,
+                    rgba(217, 239, 242, .9),
+                    transparent 30%),
+                #fafaf5;
+        }
+
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 1px solid rgba(25, 116, 135, .12);
+            right: -130px;
+            top: 40px;
+            animation: aboutFloat 8s ease-in-out infinite;
+        }
+
+        .about-hero::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(244, 201, 93, .18);
+            right: 15%;
+            bottom: -100px;
+            filter: blur(2px);
+            animation: aboutFloat 7s ease-in-out infinite reverse;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+
+        .about-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 22px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #197487;
+        }
+
+        .about-kicker::before {
+            content: "";
+            width: 32px;
+            height: 2px;
+            background: #197487;
+        }
+
+        .about-hero h1 {
+            margin: 0;
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: .95;
+            letter-spacing: -4px;
+            color: #17252b;
+        }
+
+        .about-hero h1 span {
+            color: #197487;
+        }
+
+        .about-hero-text {
+            max-width: 620px;
+            margin-top: 28px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #66767a;
+        }
+
+        .about-hero-buttons {
+            display: flex;
+            gap: 14px;
+            margin-top: 34px;
+            flex-wrap: wrap;
+        }
+
+        .about-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 21px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .about-btn-primary {
+            color: white;
+            background: #197487;
+            box-shadow: 0 12px 30px rgba(25, 116, 135, .18);
+        }
+
+        .about-btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(25, 116, 135, .25);
+        }
+
+        .about-btn-secondary {
+            color: #17252b;
+            background: white;
+            border: 1px solid #dce6e5;
+        }
+
+        .about-btn-secondary:hover {
+            transform: translateY(-4px);
+            border-color: #197487;
+        }
+
+        /* =====================================================
+           IDEA SECTION
+        ===================================================== */
+
+        .about-idea {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-idea-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-label {
+            margin-bottom: 14px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #197487;
+        }
+
+        .about-idea h2 {
+            margin: 0;
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1;
+            letter-spacing: -2px;
+            color: #17252b;
+        }
+
+        .about-idea h2 span {
+            color: #197487;
+        }
+
+        .about-idea-copy {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #66767a;
+        }
+
+        .about-principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 60px;
+        }
+
+        .about-principle {
+            position: relative;
+            padding: 28px;
+            border-radius: 20px;
+            background: #fafaf5;
+            border: 1px solid #e4eceb;
+            transition: .35s ease;
+            overflow: hidden;
+        }
+
+        .about-principle::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            right: -30px;
+            bottom: -30px;
+            background: rgba(217, 239, 242, .7);
+            transition: .4s ease;
+        }
+
+        .about-principle:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(23, 37, 43, .08);
+        }
+
+        .about-principle:hover::after {
+            transform: scale(1.6);
+        }
+
+        .about-principle-number {
+            position: relative;
+            z-index: 2;
+            font-size: 12px;
+            font-weight: 800;
+            color: #197487;
+        }
+
+        .about-principle h3 {
+            position: relative;
+            z-index: 2;
+            margin: 20px 0 10px;
+            font-family: "Outfit", sans-serif;
+            font-size: 23px;
+            color: #17252b;
+        }
+
+        .about-principle p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: #66767a;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           WORKER SHOWCASE
+        ===================================================== */
+
+        .worker-showcase {
+            position: relative;
+            padding: 110px 0;
+            background: #f2f7f6;
+            overflow: hidden;
+        }
+
+        .worker-showcase::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(25, 116, 135, .08);
+            border-radius: 50%;
+            left: -250px;
+            top: 100px;
+        }
+
+        .showcase-heading {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .showcase-heading h2 {
+            margin: 0;
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(40px, 5vw, 64px);
+            line-height: 1;
+            letter-spacing: -2px;
+            color: #17252b;
+        }
+
+        .showcase-heading h2 span {
+            color: #197487;
+        }
+
+        .showcase-heading p {
+            max-width: 430px;
+            margin: 0;
+            color: #66767a;
+            line-height: 1.7;
+        }
+
+        /* cards */
+
+        .about-worker-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .about-worker-card {
+            position: relative;
+            background: white;
+            border: 1px solid #dce6e5;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: .4s ease;
+            animation: workerCardIn .7s ease both;
+        }
+
+        .about-worker-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 25px 55px rgba(23, 37, 43, .12);
+        }
+
+        .worker-photo {
+            position: relative;
+            height: 270px;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    #d9eff2,
+                    #fafaf5
+                );
+        }
+
+        .worker-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .about-worker-card:hover .worker-photo img {
+            transform: scale(1.06);
+        }
+
+        .worker-photo-empty {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Outfit", sans-serif;
+            font-size: 60px;
+            font-weight: 800;
+            color: rgba(25, 116, 135, .3);
+        }
+
+        .worker-approved {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 11px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.94);
+            backdrop-filter: blur(8px);
+            font-size: 11px;
+            font-weight: 800;
+            color: #39712e;
+            box-shadow: 0 7px 20px rgba(23,37,43,.1);
+        }
+
+        .worker-info {
+            padding: 24px;
+        }
+
+        .worker-name {
+            margin: 0;
+            font-family: "Outfit", sans-serif;
+            font-size: 24px;
+            color: #17252b;
+        }
+
+        .worker-instagram {
+            display: inline-flex;
+            margin-top: 7px;
+            color: #197487;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .worker-instagram:hover {
+            text-decoration: underline;
+        }
+
+        .worker-description {
+            margin: 18px 0 0;
+            color: #66767a;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .worker-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px solid #edf1f0;
+        }
+
+        .worker-card-footer span {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #8a989b;
+        }
+
+        .worker-arrow {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #d9eff2;
+            color: #197487;
+            transition: .3s ease;
+        }
+
+        .about-worker-card:hover .worker-arrow {
+            transform: rotate(45deg);
+            background: #197487;
+            color: white;
+        }
+
+        /* =====================================================
+           LOADING / EMPTY
+        ===================================================== */
+
+        .showcase-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 70px 20px;
+            border: 1px dashed #cbdad8;
+            border-radius: 24px;
+            background: rgba(255,255,255,.6);
+        }
+
+        .showcase-message h3 {
+            margin: 0 0 10px;
+            font-family: "Outfit", sans-serif;
+            font-size: 25px;
+            color: #17252b;
+        }
+
+        .showcase-message p {
+            margin: 0;
+            color: #66767a;
+        }
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .about-cta {
+            padding: 100px 0;
+            background: #17252b;
+            color: white;
+        }
+
+        .about-cta-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-cta h2 {
+            margin: 0;
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(38px, 5vw, 60px);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .about-cta p {
+            max-width: 540px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,.68);
+            line-height: 1.7;
+        }
+
+        .about-cta-btn {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 23px;
+            border-radius: 14px;
+            background: #f4c95d;
+            color: #17252b;
+            text-decoration: none;
+            font-weight: 800;
+            transition: .3s ease;
+        }
+
+        .about-cta-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(244,201,93,.2);
+        }
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+
+        @keyframes aboutFloat {
+            0%,100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(4deg);
+            }
+        }
+
+        @keyframes workerCardIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .about-idea-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-principles {
+                grid-template-columns: 1fr;
+            }
+
+            .about-worker-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .showcase-heading {
+                align-items: start;
+                flex-direction: column;
+            }
+
+            .about-cta-inner {
+                align-items: start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .about-hero {
+                min-height: auto;
+                padding: 90px 0 70px;
+            }
+
+            .about-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .about-hero-text {
+                font-size: 16px;
+            }
+
+            .about-idea,
+            .worker-showcase,
+            .about-cta {
+                padding: 75px 0;
+            }
+
+            .about-worker-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .worker-photo {
+                height: 250px;
+            }
+
+            .about-cta h2 {
+                font-size: 42px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+
+        /* =====================================================
+   ABOUT PAGE SCROLL FIX
+===================================================== */
+
+html,
+body {
+    height: auto !important;
+    min-height: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body.about-page {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+main {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+}
+    </style>
+</head>
+
+<body class="about-page">
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <header class="navbar" id="siteHeader">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">W</span>
+
+                <span>
+                    Work<span>Onnect</span>
+                </span>
+            </a>
+
+            <nav class="nav-menu" id="navLinks">
+
+                <a href="../index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="services.html" class="nav-link">
+                    Services
+                </a>
+
+                <a href="how-it-works.html" class="nav-link">
+                    How It Works
+                </a>
+
+                <a href="about.html" class="nav-link active">
+                    About
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="register.html" class="register-btn">
+                    Get Started
+                    <span>→</span>
+                </a>
+
+            </nav>
+
+            <button
+                class="menu-btn"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             ABOUT HERO
+        ===================================================== -->
+
+        <section class="about-hero">
+
+            <div class="container">
+
+                <div class="about-hero-content">
+
+                    <div class="about-kicker">
+                        ABOUT WORKONNECT
+                    </div>
+
+                    <h1>
+                        Work is human.
+                        <br>
+                        <span>Connection helps.</span>
+                    </h1>
+
+                    <p class="about-hero-text">
+                        WorkOnnect creates a simpler way for customers
+                        and skilled workers to discover each other,
+                        connect directly, and turn everyday needs into
+                        meaningful work.
+                    </p>
+
+                    <div class="about-hero-buttons">
+
+                        <a
+                            href="#worker-showcase"
+                            class="about-btn about-btn-primary"
+                        >
+                            Meet Our Workers
+                            <span>↓</span>
+                        </a>
+
+                        <a
+                            href="showcase.html"
+                            class="about-btn about-btn-secondary"
+                        >
+                            Explore Showcase
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             THE IDEA
+        ===================================================== -->
+
+        <section class="about-idea">
+
+            <div class="container">
+
+                <div class="about-idea-grid">
+
+                    <div>
+
+                        <p class="about-label">
+                            THE IDEA
+                        </p>
+
+                        <h2>
+                            A better local
+                            <br>
+                            <span>network.</span>
+                        </h2>
+
+                    </div>
+
+                    <p class="about-idea-copy">
+                        WorkOnnect is designed around a simple belief:
+                        finding the right person for a job should feel
+                        personal, transparent, and useful — not like
+                        scrolling through endless search results.
+                        <br><br>
+                        Customers can discover skilled workers,
+                        understand what they offer, and connect directly.
+                        Workers get a place to present their skills and
+                        showcase the work they are proud of.
+                    </p>
+
+                </div>
+
+
+                <div class="about-principles">
+
+                    <article class="about-principle">
+
+                        <span class="about-principle-number">
+                            01 / CLARITY
+                        </span>
+
+                        <h3>
+                            Keep it human
+                        </h3>
+
+                        <p>
+                            Profiles and requests help people understand
+                            one another without unnecessary complexity.
+                        </p>
+
+                    </article>
+
+
+                    <article class="about-principle">
+
+                        <span class="about-principle-number">
+                            02 / TRUST
+                        </span>
+
+                        <h3>
+                            Show the signal
+                        </h3>
+
+                        <p>
+                            Useful information and real worker profiles
+                            make connections easier to understand.
+                        </p>
+
+                    </article>
+
+
+                    <article class="about-principle">
+
+                        <span class="about-principle-number">
+                            03 / MOMENTUM
+                        </span>
+
+                        <h3>
+                            Make progress
+                        </h3>
+
+                        <p>
+                            Move naturally from discovering a skill to
+                            starting a real conversation.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WORKER SHOWCASE
+        ===================================================== -->
+
+        <section
+            class="worker-showcase"
+            id="worker-showcase"
+        >
+
+            <div class="container">
+
+                <div class="showcase-heading">
+
+                    <div>
+
+                        <p class="about-label">
+                            WORKER SHOWCASE
+                        </p>
+
+                        <h2>
+                            People behind
+                            <br>
+                            the <span>work.</span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Discover workers who have chosen to showcase
+                        their skills, experience, and work through
+                        WorkOnnect.
+                    </p>
+
+                </div>
+
+
+                <!-- Dynamic worker cards -->
+
+                <div
+                    class="about-worker-grid"
+                    id="aboutWorkerGrid"
+                >
+
+                    <div class="showcase-message">
+
+                        <h3>
+                            Loading workers...
+                        </h3>
+
+                        <p>
+                            Discovering approved WorkOnnect workers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ===================================================== -->
+
+        <section class="about-cta">
+
+            <div class="container">
+
+                <div class="about-cta-inner">
+
+                    <div>
+
+                        <h2>
+                            Ready to make
+                            <br>
+                            a connection?
+                        </h2>
+
+                        <p>
+                            Find skilled workers, share your skills,
+                            and get work moving with WorkOnnect.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="register.html"
+                        class="about-cta-btn"
+                    >
+                        Get Started
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="page-footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <a href="../index.html" class="logo">
+
+                        <span class="logo-icon">
+                            W
+                        </span>
+
+                        <span>
+                            Work<span>Onnect</span>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Local skill. Clear connection.
+                        <br>
+                        Better work, together.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-nav">
+
+                    <div>
+
+                        <small>
+                            EXPLORE
+                        </small>
+
+                        <a href="../index.html">
+                            Home
+                        </a>
+
+                        <a href="services.html">
+                            Services
+                        </a>
+
+                        <a href="how-it-works.html">
+                            How It Works
+                        </a>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            ACCOUNT
+                        </small>
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                        <a href="register.html">
+                            Register
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 WorkOnnect
+                </span>
+
+                <span>
+                    Find the right connection.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MAIN JS
+    ===================================================== -->
+
+    <script src="../assets/js/main.js"></script>
+
+
+    <!-- =====================================================
+         WORKER SHOWCASE JS
+    ===================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadAboutWorkers
+        );
+
+
+        async function loadAboutWorkers() {
+
+            const grid =
+                document.getElementById(
+                    "aboutWorkerGrid"
+                );
+
+            if (!grid) {
+                return;
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "../../BackEnd/get_approved_showcase.php",
+                        {
+                            method: "GET",
+                            credentials: "same-origin",
+                            cache: "no-store"
+                        }
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Server returned HTTP " +
+                        response.status
+                    );
+
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !data.success ||
+                    !Array.isArray(data.showcases)
+                ) {
+
+                    throw new Error(
+                        data.message ||
+                        "Unable to load workers."
+                    );
+
+                }
+
+
+                if (
+                    data.showcases.length === 0
+                ) {
+
+                    grid.innerHTML = `
+
+                        <div class="showcase-message">
+
+                            <h3>
+                                Worker Showcase is growing
+                            </h3>
+
+                            <p>
+                                Approved worker showcases will
+                                appear here.
+                            </p>
+
+                        </div>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                grid.innerHTML =
+                    data.showcases
+                        .map(
+                            createWorkerCard
+                        )
+                        .join("");
+
+
+            } catch (error) {
+
+                console.error(
+                    "Worker Showcase Error:",
+                    error
+                );
+
+
+                grid.innerHTML = `
+
+                    <div class="showcase-message">
+
+                        <h3>
+                            Unable to load showcase
+                        </h3>
+
+                        <p>
+                            Please refresh the page and try again.
+                        </p>
+
+                    </div>
+
+                `;
+
+            }
+
+        }
+
+
+        function createWorkerCard(worker, index) {
+
+            const name =
+                escapeAboutHtml(
+                    worker.name ||
+                    "WorkOnnect Worker"
+                );
+
+
+            const description =
+                escapeAboutHtml(
+                    worker.description ||
+                    "Skilled worker on WorkOnnect."
+                );
+
+
+            const instagram =
+                String(
+                    worker.instagram || ""
+                ).trim();
+
+
+            let instagramUrl = "#";
+
+
+            if (instagram) {
+
+                const cleanInstagram =
+                    instagram
+                        .replace(
+                            /^@/,
+                            ""
+                        )
+                        .replace(
+                            /^https?:\/\/(www\.)?instagram\.com\//i,
+                            ""
+                        )
+                        .replace(
+                            /\/$/,
+                            ""
+                        );
+
+
+                instagramUrl =
+                    "https://www.instagram.com/" +
+                    encodeURIComponent(
+                        cleanInstagram
+                    );
+
+            }
+
+
+            let imageHtml = `
+
+                <div class="worker-photo">
+
+                    <div class="worker-photo-empty">
+                        ${getInitial(name)}
+                    </div>
+
+                    <span class="worker-approved">
+                        ✓ Approved
+                    </span>
+
+                </div>
+
+            `;
+
+
+            if (worker.image) {
+
+                const imagePath =
+                    "../../" +
+                    String(
+                        worker.image
+                    )
+                    .replace(
+                        /^\/+/,
+                        ""
+                    );
+
+
+                imageHtml = `
+
+                    <div class="worker-photo">
+
+                        <img
+                            src="${escapeAboutAttribute(imagePath)}"
+                            alt="${escapeAboutAttribute(name)}"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;worker-photo-empty&quot;>${getInitial(name)}</div><span class=&quot;worker-approved&quot;>✓ Approved</span>';"
+                        >
+
+                        <span class="worker-approved">
+                            ✓ Approved
+                        </span>
+
+                    </div>
+
+                `;
+
+            }
+
+
+            return `
+
+                <article
+                    class="about-worker-card"
+                    style="animation-delay:${Math.min(index, 8) * 80}ms"
+                >
+
+                    ${imageHtml}
+
+                    <div class="worker-info">
+
+                        <h3 class="worker-name">
+                            ${name}
+                        </h3>
+
+
+                        ${
+                            instagram
+                                ? `
+                                    <a
+                                        href="${escapeAboutAttribute(instagramUrl)}"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="worker-instagram"
+                                    >
+                                        @${escapeAboutHtml(
+                                            instagram
+                                                .replace(/^@/, "")
+                                                .replace(
+                                                    /^https?:\/\/(www\.)?instagram\.com\//i,
+                                                    ""
+                                                )
+                                                .replace(/\/$/, "")
+                                        )}
+                                    </a>
+                                  `
+                                : ""
+                        }
+
+
+                        <p class="worker-description">
+                            ${description}
+                        </p>
+
+
+                        <div class="worker-card-footer">
+
+                            <span>
+                                WORKONNECT WORKER
+                            </span>
+
+                            ${
+                                instagram
+                                    ? `
+                                        <a
+                                            href="${escapeAboutAttribute(instagramUrl)}"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="worker-arrow"
+                                            aria-label="View Instagram"
+                                        >
+                                            ↗
+                                        </a>
+                                      `
+                                    : `
+                                        <span class="worker-arrow">
+                                            ✓
+                                        </span>
+                                      `
+                            }
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }
+
+
+        function getInitial(name) {
+
+            const cleaned =
+                String(name)
+                    .trim();
+
+
+            return cleaned
+                ? cleaned
+                    .charAt(0)
+                    .toUpperCase()
+                : "W";
+
+        }
+
+
+        function escapeAboutHtml(value) {
+
+            return String(value)
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+        function escapeAboutAttribute(value) {
+
+            return escapeAboutHtml(
+                value
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

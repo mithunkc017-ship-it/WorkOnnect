@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Workonnect administration dashboard.">
+        <title>Admin Dashboard | Workonnect</title>
+        <link rel="stylesheet" href="../assets/css/admin.css">
+    </head>
+    <body>
+        <div class="admin-shell">
+            <aside class="admin-sidebar" aria-label="Admin navigation">
+                <a href="../index.html" class="admin-brand">
+                    <span class="brand-mark">W</span>
+                    <span>Work<span>onnect</span></span>
+                </a>
+                <div class="sidebar-label">Workspace</div>
+                <nav class="admin-nav">
+                    <a href="#overview" class="nav-item active"><span aria-hidden="true">▦</span> Overview</a>
+                    <a href="#users" class="nav-item"><span aria-hidden="true">◎</span> Users</a>
+                </nav>
+                <div class="sidebar-footer">
+                    <span class="status-dot"></span>
+                    <span>System connected</span>
+                </div>
+            </aside>
+
+            <main class="admin-main">
+                <header class="admin-topbar">
+                    <div>
+                        <span class="eyebrow">WORKONNECT CONTROL ROOM</span>
+                        <h1>Good morning, admin.</h1>
+                    </div>
+                    <div class="topbar-actions">
+                        <a href="../index.html" class="text-link">View site</a>
+                        <a href="login.html" class="profile-chip"><span class="avatar">A</span><span>Admin</span></a>
+                    </div>
+                </header>
+
+                <div class="admin-content" id="overview">
+                    <div class="page-intro">
+                        <div>
+                            <span class="section-kicker">OVERVIEW</span>
+                            <h2>Keep the network moving.</h2>
+                        </div>
+                        <button type="button" class="refresh-button" id="refreshButton" title="Refresh dashboard"><span aria-hidden="true">↻</span> Refresh</button>
+                    </div>
+
+                    <div class="notice" id="adminNotice" role="status" hidden></div>
+
+                    <section class="metrics-grid" aria-label="Platform metrics">
+                        <article class="metric-card metric-primary">
+                            <span class="metric-label">TOTAL USERS</span>
+                            <strong id="totalUsers">--</strong>
+                            <span class="metric-caption">Registered accounts</span>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-label">NEW THIS WEEK</span>
+                            <strong id="newUsers">--</strong>
+                            <span class="metric-caption">Recent registrations</span>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-label">ACTIVE DIRECTORY</span>
+                            <strong id="directoryStatus">--</strong>
+                            <span class="metric-caption">Database availability</span>
+                        </article>
+                    </section>
+
+                    <section class="panel" id="users" aria-labelledby="usersHeading">
+                        <div class="panel-heading">
+                            <div>
+                                <span class="section-kicker">DIRECTORY</span>
+                                <h2 id="usersHeading">User accounts</h2>
+                            </div>
+                            <label class="search-field">
+                                <span aria-hidden="true">⌕</span>
+                                <input type="search" id="userSearch" placeholder="Search users" autocomplete="off">
+                            </label>
+                        </div>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr><th>Name</th><th>Email</th><th>Joined</th><th>Access</th></tr>
+                                </thead>
+                                <tbody id="usersTableBody">
+                                    <tr><td colspan="4" class="table-state">Loading directory...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <script src="../assets/js/admin.js"></script>
+    </body>
+</html>

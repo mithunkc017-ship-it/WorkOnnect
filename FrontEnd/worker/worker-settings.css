@@ -1,0 +1,128 @@
+button#workerSettingsTrigger:focus-visible {
+    outline: 3px solid rgba(25,116,135,.22);
+    outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------
+   DARK MODE
+--------------------------------------------------------- */
+
+body.worker-dark-mode #workerSettingsDrawer {
+    --ws-bg: #10191d;
+    --ws-surface: #17252b;
+    --ws-soft: #1e3035;
+    --ws-text: #edf7f6;
+    --ws-muted: #9aabad;
+    --ws-line: #304247;
+    --ws-blue: #193b43;
+    --ws-blue-deep: #62c5d3;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(98,197,211,.12),
+            transparent 35%
+        ),
+        #10191d !important;
+
+    border-left-color: #304247 !important;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-drawer-header {
+    background:
+        linear-gradient(
+            135deg,
+            #17252b,
+            #1b3035
+        );
+
+    border-bottom-color: #304247;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-drawer-header h2,
+body.worker-dark-mode #workerSettingsDrawer .settings-profile-card strong,
+body.worker-dark-mode #workerSettingsDrawer .settings-block-title strong,
+body.worker-dark-mode #workerSettingsDrawer .drawer-setting-row strong,
+body.worker-dark-mode #workerSettingsDrawer .drawer-action {
+    color: #edf7f6;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-profile-card,
+body.worker-dark-mode #workerSettingsDrawer .settings-block {
+    background: #17252b;
+    border-color: #304247;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-close {
+    background: #17252b;
+    color: #edf7f6;
+    border-color: #304247;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-profile-avatar {
+    background: #193b43;
+    color: #62c5d3;
+    border-color: #17252b;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-profile-card span,
+body.worker-dark-mode #workerSettingsDrawer .drawer-action > span {
+    color: #62c5d3;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .theme-choice {
+    background: #1e3035;
+    border-color: #304247;
+    color: #9aabad;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .theme-choice.active {
+    background: #193b43;
+    border-color: #62c5d3;
+    color: #62c5d3;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .drawer-setting-row,
+body.worker-dark-mode #workerSettingsDrawer .drawer-action {
+    border-color: #304247;
+}
+
+body.worker-dark-mode #workerSettingsDrawer .settings-drawer-content::-webkit-scrollbar-thumb {
+    background: #40575c;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    #workerSettingsDrawer {
+        width: 94vw !important;
+    }
+
+    #workerSettingsDrawer .settings-drawer-header {
+        padding: 22px 18px 18px;
+    }
+
+    #workerSettingsDrawer .settings-drawer-content {
+        padding: 14px 16px 28px;
+    }
+
+    #workerSettingsDrawer .settings-drawer-header h2 {
+        font-size: 24px;
+    }
+
+    #workerSettingsDrawer .settings-block {
+        padding: 15px;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 390px) {
+    #workerSettingsDrawer {
+        width: 100vw !important;
+    }
+
+    #workerSettingsDrawer .settings-profile-card {
+        margin-left: 0;
+        margin-right: 0;

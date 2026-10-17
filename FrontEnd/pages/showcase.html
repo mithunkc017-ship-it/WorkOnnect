@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Discover skilled workers and their work on WorkOnnect."
+    >
+
+    <title>Worker Showcase | WorkOnnect</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --ink: #17252b;
+            --muted: #66767a;
+            --blue: #d9eff2;
+            --blue-deep: #197487;
+            --yellow: #f4c95d;
+            --coral: #f28573;
+            --green: #cde5c2;
+            --line: #dce6e5;
+            --cream: #fafaf5;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            min-height: 100vh;
+        }
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 250, 245, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(220, 230, 229, .7);
+        }
+
+        .logo {
+            text-decoration: none;
+            font-family: "Outfit", sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--blue-deep);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            transition: .25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue-deep);
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--blue-deep);
+            border-radius: 10px;
+            transition: .3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .profile-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink);
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .profile-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--blue-deep);
+            box-shadow: 0 8px 22px rgba(25, 116, 135, .15);
+        }
+
+        .profile-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 90px 7% 75px;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: var(--blue);
+            border-radius: 50%;
+            top: -170px;
+            left: -130px;
+            opacity: .55;
+            animation: floatBubble 7s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: #f7e6ae;
+            border-radius: 50%;
+            right: -100px;
+            bottom: -150px;
+            opacity: .5;
+            animation: floatBubble 8s ease-in-out infinite reverse;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+            margin: auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 30px;
+            background: var(--blue);
+            color: var(--blue-deep);
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeDown .7s ease both;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--blue-deep);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1;
+            letter-spacing: -2.5px;
+            margin-bottom: 22px;
+            animation: fadeUp .8s ease both;
+        }
+
+        .hero h1 span {
+            color: var(--blue-deep);
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.7;
+            animation: fadeUp 1s ease both;
+        }
+
+        /* =========================================
+           SHOWCASE
+        ========================================= */
+
+        .showcase-section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 15px 7% 100px;
+        }
+
+        .section-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .section-top h2 {
+            font-family: "Outfit", sans-serif;
+            font-size: 28px;
+        }
+
+        .section-top p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .workers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        /* =========================================
+           WORKER CARD
+        ========================================= */
+
+        .worker-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            overflow: hidden;
+            transition: transform .35s ease, box-shadow .35s ease;
+            animation: cardAppear .65s ease both;
+        }
+
+        .worker-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 45px rgba(23, 37, 43, .10);
+        }
+
+        .worker-image {
+            width: 100%;
+            height: 245px;
+            position: relative;
+            overflow: hidden;
+            background: var(--blue);
+        }
+
+        .worker-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .worker-card:hover .worker-image img {
+            transform: scale(1.06);
+        }
+
+        .no-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            color: var(--blue-deep);
+        }
+
+        .no-image-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .no-image-icon svg {
+            width: 27px;
+        }
+
+        .approved-label {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,.94);
+            color: #39712e;
+            padding: 7px 11px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,.08);
+        }
+
+        .worker-content {
+            padding: 22px;
+        }
+
+        .worker-name {
+            font-family: "Outfit", sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .instagram {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: var(--blue-deep);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .instagram:hover {
+            text-decoration: underline;
+        }
+
+        .instagram svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        .description {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.65;
+            min-height: 46px;
+        }
+
+        .card-bottom {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .verified {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: #39712e;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .verified-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #67a95b;
+        }
+
+        .view-work {
+            color: var(--ink);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           LOADING / EMPTY
+        ========================================= */
+
+        .loading,
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 70px 20px;
+            color: var(--muted);
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--line);
+            border-top-color: var(--blue-deep);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            animation: spin .8s linear infinite;
+        }
+
+        .empty h3 {
+            color: var(--ink);
+            margin-bottom: 8px;
+            font-family: "Outfit", sans-serif;
+            font-size: 22px;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 7%;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================
+           ANIMATIONS
+        ========================================= */
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatBubble {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .workers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                padding: 18px 5%;
+            }
+
+            .nav-links a {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 5% 55px;
+            }
+
+            .showcase-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .workers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-top {
+                display: block;
+            }
+
+            .section-top p {
+                margin-top: 5px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+
+        <a href="../index.html" class="logo">
+            Work<span>Onnect</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+        <a
+            href="login.html"
+            class="profile-btn"
+            aria-label="Profile"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+            >
+                <circle
+                    cx="12"
+                    cy="8"
+                    r="3.2"
+                />
+
+                <path
+                    d="M5.5 20c.8-3.5 3-5.2 6.5-5.2s5.7 1.7 6.5 5.2"
+                    stroke-linecap="round"
+                />
+            </svg>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                WORKER SHOWCASE
+            </div>
+
+            <h1>
+                Meet the people
+                <span>behind the work.</span>
+            </h1>
+
+            <p>
+                Explore talented workers, discover their skills,
+                and see the work they are proud to share with
+                the WorkOnnect community.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         SHOWCASE
+    ========================================= -->
+
+    <main class="showcase-section">
+
+        <div class="section-top">
+
+            <div>
+
+                <h2>
+                    Featured Workers
+                </h2>
+
+                <p>
+                    Work shared by approved WorkOnnect workers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="workers-grid"
+            id="workersGrid"
+        >
+
+            <div class="loading">
+
+                <div class="loader"></div>
+
+                Loading workers...
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026 WorkOnnect.
+        Connecting people with skilled workers.
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        const workersGrid =
+            document.getElementById("workersGrid");
+
+
+        async function loadWorkerShowcase() {
+
+            try {
+
+                const response =
+                    await fetch(
+                        "../../BackEnd/get_approved_showcase.php",
+                        {
+                            method: "GET",
+                            cache: "no-store"
+                        }
+                    );
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Server returned HTTP " +
+                        response.status
+                    );
+
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !data.success ||
+                    !data.showcases ||
+                    data.showcases.length === 0
+                ) {
+
+                    workersGrid.innerHTML = `
+
+                        <div class="empty">
+
+                            <h3>
+                                No workers featured yet
+                            </h3>
+
+                            <p>
+                                Approved worker showcases
+                                will appear here.
+                            </p>
+
+                        </div>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                workersGrid.innerHTML =
+                    data.showcases
+                        .map(
+                            (worker, index) =>
+                                createWorkerCard(
+                                    worker,
+                                    index
+                                )
+                        )
+                        .join("");
+
+
+            } catch (error) {
+
+                console.error(
+                    "SHOWCASE ERROR:",
+                    error
+                );
+
+
+                workersGrid.innerHTML = `
+
+                    <div class="empty">
+
+                        <h3>
+                            Unable to load showcase
+                        </h3>
+
+                        <p>
+                            Please try again later.
+                        </p>
+
+                    </div>
+
+                `;
+
+            }
+
+        }
+
+
+        function createWorkerCard(
+            worker,
+            index
+        ) {
+
+            const name =
+                escapeHtml(
+                    worker.name || "Worker"
+                );
+
+
+            const description =
+                escapeHtml(
+                    worker.description ||
+                    "Work shared by a WorkOnnect worker."
+                );
+
+
+            const instagram =
+                worker.instagram || "";
+
+
+            const instagramUrl =
+                buildInstagramUrl(
+                    instagram
+                );
+
+
+            let imageHTML = `
+
+                <div class="no-image">
+
+                    <div class="no-image-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="18"
+                                height="18"
+                                rx="3"
+                            />
+
+                            <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="1.5"
+                            />
+
+                            <path
+                                d="m21 15-5-5L5 21"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <span>
+                        No photo uploaded
+                    </span>
+
+                </div>
+
+            `;
+
+
+            if (worker.image) {
+
+                imageHTML = `
+
+                    <img
+                        src="../../${escapeHtml(worker.image)}"
+                        alt="${name}"
+                        loading="lazy"
+                    >
+
+                `;
+
+            }
+
+
+            return `
+
+                <article
+                    class="worker-card"
+                    style="animation-delay:${index * 80}ms"
+                >
+
+                    <div class="worker-image">
+
+                        ${imageHTML}
+
+                        <span class="approved-label">
+                            ✓ Approved
+                        </span>
+
+                    </div>
+
+
+                    <div class="worker-content">
+
+                        <h3 class="worker-name">
+                            ${name}
+                        </h3>
+
+
+                        <a
+                            class="instagram"
+                            href="${instagramUrl}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="18"
+                                    height="18"
+                                    rx="5"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="4"
+                                />
+
+                                <circle
+                                    cx="17.5"
+                                    cy="6.5"
+                                    r="1"
+                                    fill="currentColor"
+                                    stroke="none"
+                                />
+
+                            </svg>
+
+                            ${escapeHtml(
+                                formatInstagram(
+                                    instagram
+                                )
+                            )}
+
+                        </a>
+
+
+                        <p class="description">
+                            ${description}
+                        </p>
+
+
+                        <div class="card-bottom">
+
+                            <div class="verified">
+
+                                <span
+                                    class="verified-dot"
+                                ></span>
+
+                                Verified Showcase
+
+                            </div>
+
+                            <span class="view-work">
+                                View Work →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }
+
+
+        function buildInstagramUrl(
+            username
+        ) {
+
+            username =
+                username
+                    .trim()
+                    .replace(/^@/, "");
+
+
+            if (!username) {
+
+                return "#";
+
+            }
+
+
+            if (
+                username.startsWith("http://") ||
+                username.startsWith("https://")
+            ) {
+
+                return username;
+
+            }
+
+
+            return (
+                "https://www.instagram.com/" +
+                encodeURIComponent(username) +
+                "/"
+            );
+
+        }
+
+
+        function formatInstagram(
+            username
+        ) {
+
+            username =
+                username
+                    .trim()
+                    .replace(/^@/, "");
+
+
+            return "@" + username;
+
+        }
+
+
+        function escapeHtml(value) {
+
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
+        }
+
+
+        loadWorkerShowcase();
+
+    </script>
+
+</body>
+
+</html>

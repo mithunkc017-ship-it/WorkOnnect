@@ -1,0 +1,1590 @@
+/* =========================================
+   WORKONNECT USERS PAGE
+========================================= */
+
+.users-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 22px;
+    padding: 28px 30px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.88);
+    border: 1px solid #e5eceb;
+    box-shadow: 0 12px 35px rgba(23,37,43,.05);
+    animation: usersEnter .6s ease both;
+}
+
+@keyframes usersEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.users-label {
+    display: block;
+    color: #197487;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 1.8px;
+    margin-bottom: 7px;
+}
+
+.users-heading h2 {
+    font-size: 25px;
+    letter-spacing: -.6px;
+    margin-bottom: 6px;
+}
+
+.users-heading p {
+    color: #728287;
+    font-size: 12px;
+}
+
+.users-count {
+    min-width: 125px;
+    padding: 16px 20px;
+    text-align: center;
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        #e5f5f6,
+        #f7fbfb
+    );
+    border: 1px solid #d7eaeb;
+}
+
+.users-count span {
+    display: block;
+    color: #728287;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.users-count strong {
+    color: #197487;
+    font-size: 27px;
+}
+
+.users-toolbar {
+    margin-bottom: 18px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 16px;
+    border: 1px solid #e2e9e8;
+    border-radius: 16px;
+    background: rgba(255,255,255,.9);
+    box-shadow: 0 8px 25px rgba(23,37,43,.04);
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+.search-box:focus-within {
+    border-color: #a9d4d8;
+    box-shadow: 0 12px 30px rgba(25,116,135,.09);
+    transform: translateY(-2px);
+}
+
+.search-box span {
+    font-size: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #17252b;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.search-box input::placeholder {
+    color: #9aa7aa;
+}
+
+.users-panel {
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid #e5eceb;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 12px 35px rgba(23,37,43,.05);
+    animation: usersPanelEnter .7s .1s both;
+}
+
+@keyframes usersPanelEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   USERS TABLE - CLEAN ALIGNMENT
+========================================= */
+
+.users-table-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1.4fr)
+        minmax(220px, 1.8fr)
+        100px
+        120px
+        50px;
+
+    align-items: center;
+
+    column-gap: 20px;
+
+    padding: 12px 20px;
+
+    color: #7b898c;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   USER ROW
+========================================= */
+
+.user-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1.4fr)
+        minmax(220px, 1.8fr)
+        100px
+        120px
+        50px;
+
+    align-items: center;
+
+    column-gap: 20px;
+
+    min-height: 64px;
+
+    width: 100%;
+
+    padding: 10px 20px;
+
+    margin-bottom: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7eeee;
+
+    border-radius: 14px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+.user-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d5e5e5;
+
+    box-shadow:
+        0 8px 22px rgba(23, 37, 43, .07);
+}
+
+
+/* =========================================
+   USER NAME
+========================================= */
+
+.user-main {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+.large-user-avatar {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf5f3;
+
+    color: #197487;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.user-main > div:last-child {
+    min-width: 0;
+}
+
+
+.user-main strong {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    color: #17252b;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.user-main span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: #9aa6a9;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.user-email {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 12px;
+
+    color: #66767a;
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.user-card > div:nth-child(3) {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+
+.role-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 72px;
+
+    padding: 5px 10px;
+
+    border-radius: 30px;
+
+    font-size: 10px;
+
+    font-weight: 750;
+
+    text-transform: capitalize;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   JOINED + ACTION
+========================================= */
+
+.user-actions {
+    display: contents;
+}
+
+
+.joined-date {
+    display: block;
+
+    font-size: 11px;
+
+    color: #7b898c;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-user-btn {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #fff1ef;
+
+    color: #e46f61;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+
+.delete-user-btn:hover {
+    background: #ffe2de;
+
+    transform: scale(1.08);
+}
+
+
+.delete-user-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* =========================================
+   EMPTY USERS
+========================================= */
+
+.no-users {
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .users-table-header,
+    .user-card {
+
+        grid-template-columns:
+            minmax(150px, 1.3fr)
+            minmax(180px, 1.6fr)
+            90px
+            100px
+            45px;
+
+        column-gap: 12px;
+    }
+
+    .users-table-header {
+        padding: 10px 14px;
+    }
+
+    .user-card {
+        padding: 9px 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .users-table-header {
+        display: none;
+    }
+
+
+    .user-card {
+
+        grid-template-columns: 1fr auto;
+
+        row-gap: 8px;
+
+        column-gap: 12px;
+
+        padding: 14px;
+    }
+
+
+    .user-main {
+        grid-column: 1;
+    }
+
+
+    .user-email {
+        grid-column: 1 / -1;
+
+        padding-left: 48px;
+    }
+
+
+    .user-card > div:nth-child(3) {
+        grid-column: 1;
+    }
+
+
+    .user-actions {
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        grid-column: 2;
+
+        grid-row: 3;
+    }
+
+}
+
+
+
+/* =========================================
+   FINAL USERS ALIGNMENT FIX
+========================================= */
+
+.users-panel {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+/* HEADER AND USER ROW MUST USE
+   EXACTLY THE SAME COLUMNS */
+
+.users-table-header,
+.user-card {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        30% 30% 15% 15% 10% !important;
+
+    align-items: center;
+
+    gap: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* HEADER */
+
+.users-table-header {
+    padding: 12px 20px !important;
+
+    color: #7b898c;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+}
+
+
+/* USER ROW */
+
+.user-card {
+    min-height: 64px;
+
+    padding: 10px 20px !important;
+
+    margin-bottom: 7px;
+
+    background: #fff;
+
+    border: 1px solid #e7eeee;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+}
+
+
+/* USER */
+
+.user-main {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    overflow: hidden;
+}
+
+
+/* EMAIL */
+
+.user-email {
+    min-width: 0;
+
+    padding: 0 10px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* ROLE */
+
+.user-card > div:nth-child(3) {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+
+/* JOINED + ACTION */
+
+.user-actions {
+    display: contents !important;
+}
+
+
+.joined-date {
+    min-width: 0;
+
+    white-space: nowrap;
+
+    font-size: 11px;
+}
+
+
+/* DELETE BUTTON */
+
+.delete-user-btn {
+    width: 32px;
+
+    height: 32px;
+
+    margin-left: auto;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .users-panel {
+        overflow-x: auto;
+    }
+
+    .users-table-header,
+    .user-card {
+        min-width: 700px;
+    }
+
+}
+
+/* =========================================
+   ROLE FILTER BUTTONS
+========================================= */
+
+.role-filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 5px;
+
+    width: fit-content;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e9e8;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(23, 37, 43, 0.04);
+}
+
+
+/* EACH BUTTON */
+
+.role-filter-btn {
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #53666b;
+
+    padding: 10px 17px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .2s ease,
+        box-shadow .25s ease;
+}
+
+
+/* HOVER */
+
+.role-filter-btn:hover {
+    background: #edf6f5;
+
+    color: #197487;
+
+    transform: translateY(-1px);
+}
+
+
+/* ACTIVE BUTTON */
+
+.role-filter-btn.active {
+    background: #197487;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 14px rgba(25, 116, 135, .20);
+}
+
+
+/* ACTIVE HOVER */
+
+.role-filter-btn.active:hover {
+    background: #156b7b;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* CLICK EFFECT */
+
+.role-filter-btn:active {
+    transform: scale(.96);
+}
+
+
+/* =========================================
+   SEARCH + FILTER LAYOUT
+========================================= */
+
+.users-toolbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .users-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .role-filter {
+        width: fit-content;
+
+        align-self: flex-start;
+
+        overflow-x: auto;
+
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .role-filter {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .role-filter-btn {
+        padding: 9px 6px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================
+   SMOOTH USER FILTER
+========================================= */
+
+.user-card {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+/* Hidden user */
+
+.user-card.user-hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   SMOOTH FILTER BUTTONS
+========================================= */
+
+.role-filter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px;
+
+    background: rgba(255, 255, 255, .95);
+
+    border: 1px solid #e1e9e8;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(23, 37, 43, .05);
+}
+
+
+.role-filter-btn {
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #627378;
+
+    padding: 10px 17px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition:
+        color .25s ease,
+        background .3s ease,
+        transform .2s ease,
+        box-shadow .3s ease;
+}
+
+
+/* Hover */
+
+.role-filter-btn:hover {
+
+    color: #197487;
+
+    background: #edf7f6;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* Active */
+
+.role-filter-btn.active {
+
+    color: #ffffff;
+
+    background: #197487;
+
+    box-shadow:
+        0 5px 15px rgba(25, 116, 135, .22);
+
+}
+
+
+/* Active hover */
+
+.role-filter-btn.active:hover {
+
+    color: #ffffff;
+
+    background: #166f80;
+
+}
+
+
+/* Click */
+
+.role-filter-btn:active {
+
+    transform: scale(.94);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .role-filter {
+
+        width: 100%;
+
+        overflow-x: auto;
+
+    }
+
+    .role-filter-btn {
+
+        flex: 1;
+
+        white-space: nowrap;
+
+        padding: 9px 12px;
+
+    }
+
+}
+
+/* =========================================
+   ROLE FILTER
+========================================= */
+
+.users-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.role-filter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 5px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e9e8;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 24px rgba(23, 37, 43, .05);
+}
+
+
+.role-filter-btn {
+    appearance: none;
+    border: none;
+    outline: none;
+
+    padding: 9px 15px;
+
+    background: transparent;
+
+    color: #68787c;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .2s ease,
+        box-shadow .3s ease;
+}
+
+
+.role-filter-btn:hover {
+
+    background: #edf6f5;
+
+    color: #197487;
+
+    transform: translateY(-1px);
+
+}
+
+
+.role-filter-btn.active {
+
+    background: #197487;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 14px rgba(25, 116, 135, .20);
+
+}
+
+
+.role-filter-btn:active {
+
+    transform: scale(.95);
+
+}
+
+
+/* =========================================
+   HIDDEN USERS
+========================================= */
+
+.user-card.user-hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .users-toolbar {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .search-box {
+
+        max-width: 100%;
+
+    }
+
+
+    .role-filter {
+
+        align-self: flex-start;
+
+        max-width: 100%;
+
+        overflow-x: auto;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .role-filter {
+
+        width: 100%;
+
+    }
+
+
+    .role-filter-btn {
+
+        flex: 1;
+
+        padding: 9px 8px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+
+    }
+
+}
+
+.delete-modal {
+    display: none;
+}
+
+.delete-modal.show {
+    display: flex;
+}
+
+/* =========================================
+   DELETE MODAL - WORKING VERSION
+========================================= */
+
+.delete-modal {
+    position: fixed !important;
+    inset: 0 !important;
+
+    display: none !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    padding: 20px;
+
+    background: rgba(23, 37, 43, 0.45);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    z-index: 99999 !important;
+}
+
+.delete-modal.show {
+    display: flex !important;
+}
+
+
+/* MODAL CARD */
+
+.delete-modal-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 32px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eceb;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(23, 37, 43, 0.18);
+
+    animation: deleteModalIn .25s ease both;
+}
+
+
+@keyframes deleteModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* CLOSE */
+
+.delete-modal-close {
+
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f3f6f5;
+
+    color: #68787c;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.delete-modal-close:hover {
+
+    background: #e9eeee;
+
+    color: #17252b;
+
+    transform: rotate(90deg);
+
+}
+
+
+/* DELETE ICON */
+
+.delete-modal-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff1ef;
+
+    color: #e46f61;
+}
+
+
+.delete-modal-icon svg {
+
+    width: 26px;
+    height: 26px;
+
+}
+
+
+/* TITLE */
+
+.delete-modal-card h3 {
+
+    margin: 0 0 10px;
+
+    color: #17252b;
+
+    font-size: 21px;
+
+}
+
+
+/* TEXT */
+
+.delete-modal-card p {
+
+    margin: 0 auto 8px;
+
+    max-width: 320px;
+
+    color: #728287;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.delete-modal-card p strong {
+
+    color: #17252b;
+
+}
+
+
+/* WARNING */
+
+.delete-warning {
+
+    display: block;
+
+    margin-bottom: 24px;
+
+    color: #e46f61;
+
+    font-size: 11px;
+
+}
+
+
+/* BUTTON AREA */
+
+.delete-form {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.cancel-delete-btn,
+.confirm-delete-btn {
+
+    flex: 1;
+
+    height: 44px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.cancel-delete-btn {
+
+    background: #f1f5f4;
+
+    color: #53666b;
+
+}
+
+
+.cancel-delete-btn:hover {
+
+    background: #e7edec;
+
+    transform: translateY(-1px);
+
+}
+
+
+.confirm-delete-btn {
+
+    background: #e46f61;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(228, 111, 97, .22);
+
+}
+
+
+.confirm-delete-btn:hover {
+
+    background: #d85f51;
+
+    transform: translateY(-1px);
+
+}
+
+
+.confirm-delete-btn:active,
+.cancel-delete-btn:active {
+
+    transform: scale(.97);
+
+}
+
+
+@media (max-width: 500px) {
+
+    .delete-modal-card {
+
+        padding: 26px 20px;
+
+    }
+
+    .delete-form {
+
+        flex-direction: column;
+
+    }
+
+}
+
+/* =========================================
+   DELETE MODAL - EXTRA ANIMATION
+========================================= */
+
+/* Dark background animation */
+.delete-modal {
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.delete-modal.show {
+    opacity: 1;
+}
+
+
+/* Modal card entrance */
+.delete-modal-card {
+    animation: deleteCardEnter .35s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes deleteCardEnter {
+
+    0% {
+        opacity: 0;
+        transform: translateY(25px) scale(.92);
+    }
+
+    60% {
+        transform: translateY(-3px) scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Delete icon animation */
+.delete-modal-icon {
+    animation: deleteIconPop .4s .08s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes deleteIconPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(.5) rotate(-10deg);
+    }
+
+    70% {
+        transform: scale(1.08) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+
+}
+
+
+/* Warning text */
+.delete-warning {
+    animation: warningFade .4s .18s ease both;
+}
+
+@keyframes warningFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Buttons */
+.delete-form {
+    animation: buttonsFade .4s .22s ease both;
+}
+
+@keyframes buttonsFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Delete icon subtle pulse */
+.delete-modal-icon svg {
+    animation: trashPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes trashPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* Confirm button hover */
+.confirm-delete-btn:hover {
+
+    box-shadow:
+        0 10px 25px rgba(228, 111, 97, .30);
+
+}
+
+
+/* Close button */
+.delete-modal-close:hover {
+
+    transform: rotate(90deg) scale(1.08);
+
+}
+
+
+/* Prevent animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .delete-modal,
+    .delete-modal-card,
+    .delete-modal-icon,
+    .delete-warning,
+    .delete-form,
+    .delete-modal-icon svg {
+
+        animation: none !important;
+        transition: none !important;
+
+    }
+
+}

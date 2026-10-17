@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit Showcase | WorkOnnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --ink: #17252b;
+            --muted: #66767a;
+            --blue: #d9eff2;
+            --blue-deep: #197487;
+            --yellow: #f4c95d;
+            --coral: #f28573;
+            --green: #cde5c2;
+            --line: #dce6e5;
+            --cream: #fafaf5;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(217, 239, 242, 0.75),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 90%,
+                    rgba(205, 229, 194, 0.65),
+                    transparent 28%
+                ),
+                var(--cream);
+            color: var(--ink);
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND DECORATION
+        ========================= */
+
+        .background-shape {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(1px);
+        }
+
+        .shape-one {
+            width: 180px;
+            height: 180px;
+            background: rgba(244, 201, 93, 0.16);
+            top: 8%;
+            left: -70px;
+            animation: floatShape 7s ease-in-out infinite;
+        }
+
+        .shape-two {
+            width: 230px;
+            height: 230px;
+            background: rgba(242, 133, 115, 0.10);
+            right: -90px;
+            top: 35%;
+            animation: floatShape 9s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatShape {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(8deg);
+            }
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .topbar {
+            width: 100%;
+            padding: 22px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            text-decoration: none;
+            color: var(--ink);
+            font-family: "Outfit", sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .brand span {
+            color: var(--blue-deep);
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--ink);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border: 1px solid var(--line);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.7);
+            transition: 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+            border-color: var(--blue-deep);
+            color: var(--blue-deep);
+            background: var(--white);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .page {
+            width: min(1100px, 92%);
+            margin: 20px auto 70px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .intro-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: var(--blue);
+            color: var(--blue-deep);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .intro h1 {
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .intro h1 span {
+            color: var(--blue-deep);
+        }
+
+        .intro p {
+            max-width: 620px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           FORM CARD
+        ========================= */
+
+        .showcase-card {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 35px;
+            background: rgba(255,255,255,0.88);
+            border: 1px solid rgba(220,230,229,0.9);
+            border-radius: 28px;
+            padding: 30px;
+            box-shadow:
+                0 25px 70px rgba(23,37,43,0.08);
+            backdrop-filter: blur(12px);
+            animation: fadeUp 0.8s ease 0.1s both;
+        }
+
+        /* =========================
+           IMAGE UPLOAD
+        ========================= */
+
+        .upload-area {
+            min-height: 460px;
+            border: 2px dashed #bfd7d8;
+            border-radius: 22px;
+            background: #f5fbfb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .upload-area:hover {
+            border-color: var(--blue-deep);
+            background: #eef9fa;
+            transform: translateY(-2px);
+        }
+
+        .upload-content {
+            width: 100%;
+        }
+
+        .upload-icon {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 18px;
+            border-radius: 22px;
+            background: var(--blue);
+            color: var(--blue-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            transition: 0.3s ease;
+        }
+
+        .upload-area:hover .upload-icon {
+            transform: translateY(-6px) rotate(-4deg);
+        }
+
+        .upload-content h3 {
+            font-family: "Outfit", sans-serif;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .upload-content p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .choose-image-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            background: var(--ink);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .choose-image-btn:hover {
+            background: var(--blue-deep);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(25,116,135,0.22);
+        }
+
+        #showcaseImage {
+            display: none;
+        }
+
+        .preview-wrapper {
+            position: absolute;
+            inset: 0;
+            display: none;
+            background: white;
+        }
+
+        .preview-wrapper.active {
+            display: block;
+        }
+
+        .preview-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .change-image {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 17px;
+            border: none;
+            border-radius: 50px;
+            background: rgba(23,37,43,0.88);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .change-image:hover {
+            background: var(--blue-deep);
+        }
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .form-section {
+            padding: 8px 5px;
+        }
+
+        .form-section h2 {
+            font-family: "Outfit", sans-serif;
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .form-subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap span {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            opacity: 0.65;
+        }
+
+        .input-wrap input,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            background: #fbfdfc;
+            border-radius: 14px;
+            outline: none;
+            padding: 14px 16px;
+            font: inherit;
+            color: var(--ink);
+            transition: 0.3s ease;
+        }
+
+        .input-wrap input {
+            padding-left: 46px;
+        }
+
+        .form-group textarea {
+            min-height: 125px;
+            resize: vertical;
+        }
+
+        .input-wrap input:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue-deep);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(25,116,135,0.08);
+        }
+
+        .field-hint {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        /* =========================
+           SUBMIT
+        ========================= */
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            border-radius: 15px;
+            padding: 16px 20px;
+            background: var(--ink);
+            color: white;
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn span {
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--blue-deep);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(25,116,135,0.2);
+        }
+
+        .submit-btn:hover span {
+            transform: translateX(5px);
+        }
+
+        .submit-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        /* =========================
+           MESSAGES
+        ========================= */
+
+        .message {
+            display: none;
+            padding: 13px 16px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .message.show {
+            display: block;
+            animation: fadeUp 0.35s ease;
+        }
+
+        .message.success {
+            background: #edf8e9;
+            color: #35652b;
+            border: 1px solid #cde5c2;
+        }
+
+        .message.error {
+            background: #fff0ed;
+            color: #9b3c2c;
+            border: 1px solid #f2c0b6;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .showcase-card {
+                grid-template-columns: 1fr;
+            }
+
+            .upload-area {
+                min-height: 380px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .topbar {
+                padding: 18px 5%;
+            }
+
+            .brand {
+                font-size: 24px;
+            }
+
+            .back-link {
+                padding: 8px 13px;
+                font-size: 13px;
+            }
+
+            .page {
+                width: 94%;
+                margin-top: 10px;
+            }
+
+            .showcase-card {
+                padding: 18px;
+                border-radius: 22px;
+            }
+
+            .upload-area {
+                min-height: 330px;
+            }
+
+            .intro h1 {
+                letter-spacing: -1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="topbar">
+
+        <a href="../index.html" class="brand">
+            Work<span>Onnect</span>
+        </a>
+
+        <a href="javascript:history.back()" class="back-link">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="page">
+
+        <section class="intro">
+
+            <div class="intro-badge">
+                ✦ Student Showcase
+            </div>
+
+            <h1>
+                Show the world<br>
+                <span>what you create.</span>
+            </h1>
+
+            <p>
+                Upload your best work and share your profile with the
+                WorkOnnect community. Your submission will be reviewed
+                before appearing in the public showcase.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             SHOWCASE FORM
+        ========================== -->
+
+        <div class="showcase-card">
+
+
+            <!-- IMAGE UPLOAD -->
+
+            <div class="upload-area">
+
+                <div class="upload-content" id="uploadContent">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h3>
+                        Upload your work
+                    </h3>
+
+                    <p>
+                        Add one image that represents<br>
+                        your best work.
+                    </p>
+
+                    <label
+                        for="showcaseImage"
+                        class="choose-image-btn"
+                    >
+                        Choose Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="showcaseImage"
+                        name="showcase_image"
+                        accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+                    >
+
+                    <p class="field-hint">
+                        JPG or PNG • Maximum 5MB
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGE PREVIEW -->
+
+                <div
+                    class="preview-wrapper"
+                    id="previewWrapper"
+                >
+
+                    <img
+                        id="imagePreview"
+                        src=""
+                        alt="Showcase preview"
+                    >
+
+                    <button
+                        type="button"
+                        class="change-image"
+                        id="changeImage"
+                    >
+                        Change Image
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="form-section">
+
+                <h2>
+                    Your showcase
+                </h2>
+
+                <p class="form-subtitle">
+                    Tell us a little about your work.
+                </p>
+
+
+                <div
+                    class="message success"
+                    id="successMessage"
+                >
+                    Your showcase has been submitted successfully!
+                    It will appear after admin approval.
+                </div>
+
+                <div
+                    class="message error"
+                    id="errorMessage"
+                ></div>
+
+
+                <form
+                    action="../../BackEnd/submit_showcase.php"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    id="showcaseForm"
+                >
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <span>👤</span>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INSTAGRAM -->
+
+                    <div class="form-group">
+
+                        <label for="instagram">
+                            Instagram ID
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <span>◎</span>
+
+                            <input
+                                type="text"
+                                id="instagram"
+                                name="instagram"
+                                placeholder="@yourusername"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="field-hint">
+                            Example: @workonnect
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            About Your Work
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            placeholder="Tell people what you created, your skills, or what makes this work special..."
+                            maxlength="500"
+                        ></textarea>
+
+                        <div class="field-hint">
+                            Maximum 500 characters
+                        </div>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Submit Showcase
+                        <span>→</span>
+                    </button>
+
+                    <p class="submit-note">
+                        Your submission will be reviewed by an admin before publishing.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const imageInput =
+            document.getElementById("showcaseImage");
+
+        const previewWrapper =
+            document.getElementById("previewWrapper");
+
+        const imagePreview =
+            document.getElementById("imagePreview");
+
+        const uploadContent =
+            document.getElementById("uploadContent");
+
+        const changeImage =
+            document.getElementById("changeImage");
+
+        const form =
+            document.getElementById("showcaseForm");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        /* =========================
+           IMAGE PREVIEW
+        ========================== */
+
+        imageInput.addEventListener("change", function () {
+
+            const file = this.files[0];
+
+            if (!file) {
+                return;
+            }
+
+            const allowedTypes = [
+                "image/jpeg",
+                "image/png"
+            ];
+
+            if (!allowedTypes.includes(file.type)) {
+
+                showError(
+                    "Please select a JPG or PNG image."
+                );
+
+                this.value = "";
+                return;
+            }
+
+            if (file.size > 5 * 1024 * 1024) {
+
+                showError(
+                    "Image must be smaller than 5MB."
+                );
+
+                this.value = "";
+                return;
+            }
+
+            hideMessages();
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+
+                imagePreview.src =
+                    event.target.result;
+
+                previewWrapper.classList.add("active");
+
+                uploadContent.style.display =
+                    "none";
+            };
+
+            reader.readAsDataURL(file);
+
+        });
+
+
+        /* =========================
+           CHANGE IMAGE
+        ========================== */
+
+        changeImage.addEventListener(
+            "click",
+            function () {
+
+                imageInput.click();
+
+            }
+        );
+
+
+        /* =========================
+           FORM VALIDATION
+        ========================== */
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                const file =
+                    imageInput.files[0];
+
+                if (!file) {
+
+                    event.preventDefault();
+
+                    showError(
+                        "Please upload an image before submitting."
+                    );
+
+                    return;
+                }
+
+                if (file.size > 5 * 1024 * 1024) {
+
+                    event.preventDefault();
+
+                    showError(
+                        "Image must be smaller than 5MB."
+                    );
+
+                    return;
+                }
+
+            }
+        );
+
+
+        /* =========================
+           URL MESSAGES
+        ========================== */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        if (params.get("success") === "1") {
+
+            successMessage.classList.add("show");
+
+        }
+
+        if (params.get("error")) {
+
+            showError(
+                params.get("error")
+            );
+
+        }
+
+
+        /* =========================
+           ERROR FUNCTION
+        ========================== */
+
+        function showError(message) {
+
+            errorMessage.textContent =
+                message;
+
+            errorMessage.classList.add(
+                "show"
+            );
+
+            successMessage.classList.remove(
+                "show"
+            );
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* =========================
+           HIDE MESSAGES
+        ========================== */
+
+        function hideMessages() {
+
+            errorMessage.classList.remove(
+                "show"
+            );
+
+            successMessage.classList.remove(
+                "show"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

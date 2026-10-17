@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create your professional WorkOnnect worker profile."
+    >
+
+    <title>Worker Profile | WorkOnnect</title>
+   <!-- <link rel="stylesheet" href="../assets/css/profile.css?v=10"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="../assets/css/profile.css?v=11">
+</head>
+
+<body>
+
+<div class="profile-page">
+
+    <!-- Decorative background -->
+
+    <div class="floating-shape shape-one"></div>
+    <div class="floating-shape shape-two"></div>
+    <div class="floating-shape shape-three"></div>
+
+
+    <!-- Top navigation -->
+
+    <header class="profile-nav">
+
+        <a href="../index.html" class="profile-brand">
+
+            <span class="brand-logo">W</span>
+
+            <span class="brand-name">
+                Work<span>Onnect</span>
+            </span>
+
+        </a>
+
+        <span class="step-text">
+            PROFILE SETUP · 2 OF 2
+        </span>
+
+    </header>
+
+
+    <main class="profile-container">
+
+        <!-- Heading -->
+
+        <div class="profile-heading">
+
+            <span class="heading-tag">
+                ✦ YOUR PROFESSIONAL PROFILE
+            </span>
+
+            <h1>
+                Let customers know
+                <span>who you are.</span>
+            </h1>
+
+            <p>
+                Create your worker profile and showcase
+                your skills, experience and services.
+            </p>
+
+        </div>
+
+
+        <!-- Main profile card -->
+
+        <form
+            action="../../BackEnd/save_worker_profile.php"
+            method="POST"
+            class="worker-form"
+            enctype="multipart/form-data"
+        >
+
+            <section class="profile-card">
+
+
+                <!-- PROFILE PHOTO -->
+
+                <div class="photo-section">
+
+                    <div class="photo-wrapper">
+
+                        <div
+                            class="profile-photo"
+                            id="profilePhoto"
+                        >
+                            <span id="photoLetter">
+                                W
+                            </span>
+
+                            <img
+                                id="photoPreview"
+                                alt="Profile preview"
+                                class="profile-preview"
+                            >
+
+                        </div>
+
+                        <label
+                            for="profileImage"
+                            class="camera-button"
+                            title="Add profile photo"
+                        >
+                            📷
+                        </label>
+
+                    </div>
+
+
+                    <div class="photo-info">
+
+                        <h2>
+                            Your profile photo
+                        </h2>
+
+                        <p>
+                            Add a clear photo so customers
+                            can recognize you easily.
+                        </p>
+
+                        <label
+                            for="profileImage"
+                            class="upload-link"
+                        >
+                            Add / Change Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="profileImage"
+                            name="profile_image"
+                            accept="image/png, image/jpeg, image/jpg, image/webp"
+                            hidden
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <!-- BASIC INFORMATION -->
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>
+                            Basic information
+                        </h3>
+
+                        <p>
+                            Tell customers about yourself.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>👤</span>
+
+                            <input
+                                type="text"
+                                name="worker_name"
+                                   id="worker_name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Contact Number
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>📞</span>
+
+                            <input
+                                type="tel"
+                                name="contact_number"
+                                   id="worker_name"
+                                placeholder="Enter your phone number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFESSIONAL INFORMATION -->
+
+                <div class="section-heading section-space">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Professional information
+                        </h3>
+
+                        <p>
+                            Show customers what you can do.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Experience
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>🏆</span>
+
+                            <input
+                                type="number"
+                                name="experience"
+                                 id="experience"
+                                min="0"
+                                placeholder="Years of experience"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Service Category
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>🛠️</span>
+
+                            <select
+                                name="service_category"
+                                required
+                            >
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option value="Cleaning">
+                                    Cleaning
+                                </option>
+
+                                <option value="Plumbing">
+                                    Plumbing
+                                </option>
+
+                                <option value="Electrical">
+                                    Electrical
+                                </option>
+
+                                <option value="Painting">
+                                    Painting
+                                </option>
+
+                                <option value="Tutoring">
+                                    Tutoring
+                                </option>
+
+                                <option value="Gardening">
+                                    Gardening
+                                </option>
+
+                                <option value="Repair">
+                                    Repair
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Skills
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>✨</span>
+
+                        <input
+                            type="text"
+                            name="skills"
+                             id="skills"
+                            placeholder="Example: Wiring, repairs, installation"
+                            required
+                        >
+
+                    </div>
+
+                    <small>
+                        Separate multiple skills with commas.
+                    </small>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Location
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>📍</span>
+
+                            <input
+                                type="text"
+                                name="location"
+                                 id="location"
+                                placeholder="City / Area"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Availability
+                        </label>
+
+                        <div class="input-box">
+
+                            <span>🟢</span>
+
+                            <select
+                                name="availability"
+                                required
+                                  id="availability"
+                            >
+
+                                <option value="">
+                                    Select availability
+                                </option>
+
+                                <option value="Full Time">
+                                    Full Time
+                                </option>
+
+                                <option value="Part Time">
+                                    Part Time
+                                </option>
+
+                                <option value="Weekends">
+                                    Weekends
+                                </option>
+
+                                <option value="Flexible">
+                                    Flexible
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ABOUT -->
+
+                <div class="section-heading section-space">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            About your work
+                        </h3>
+
+                        <p>
+                            Give customers a reason to choose you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label>
+                        About You
+                    </label>
+
+                    <textarea
+                        name="about"
+                        id="about"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="Tell customers about your experience, work style and what makes your service special..."
+                    ></textarea>
+
+                    <small>
+                        Keep it friendly and professional.
+                    </small>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="form-bottom">
+
+                    <div class="secure-note">
+
+                        <span>🔒</span>
+
+                        <div>
+
+                            <strong>
+                                Your information is secure
+                            </strong>
+
+                            <p>
+                                Only relevant profile information
+                                will be shown to customers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="create-profile-btn"
+                         id="profileSubmitBtn"
+                        
+                    >
+
+                        <span>
+                            Create My Profile
+                        </span>
+
+                        <b>→</b>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   PROFILE IMAGE PREVIEW
+   ========================================= */
+
+// const imageInput =
+//     document.getElementById("profileImage");
+
+// const preview =
+//     document.getElementById("photoPreview");
+
+// const letter =
+//     document.getElementById("photoLetter");
+
+
+// imageInput.addEventListener("change", function () {
+
+//     const file = this.files[0];
+
+//     if (!file) {
+//         return;
+//     }
+
+//     if (!file.type.startsWith("image/")) {
+
+//         alert("Please select an image file.");
+
+//         this.value = "";
+
+//         return;
+//     }
+
+//     const reader = new FileReader();
+
+//     reader.onload = function (event) {
+
+//         preview.src = event.target.result;
+
+//         preview.style.display = "block";
+
+//         letter.style.display = "none";
+
+//     };
+
+//     reader.readAsDataURL(file);
+
+// });
+
+document.addEventListener("DOMContentLoaded", loadWorkerProfile);
+
+async function loadWorkerProfile() {
+
+    try {
+
+        const response = await fetch(
+            "../../BackEnd/get_worker_profile.php",
+            {
+                method: "GET",
+                credentials: "same-origin"
+            }
+        );
+
+        const data = await response.json();
+
+        const submitButton =
+            document.getElementById("profileSubmitBtn");
+
+        // No existing profile = NEW USER
+        if (!data.success || !data.profile) {
+
+            if (submitButton) {
+                submitButton.textContent = "Create My Profile";
+            }
+
+            return;
+        }
+
+        const profile = data.profile;
+
+        // Existing profile = EDIT MODE
+        if (submitButton) {
+            submitButton.textContent = "Save Changes";
+        }
+
+        // Fill existing information
+        const fields = {
+            worker_name: profile.worker_name,
+            contact_number: profile.contact_number,
+            experience: profile.experience,
+            service_category: profile.service_category,
+            skills: profile.skills,
+            location: profile.location,
+            availability: profile.availability,
+            about: profile.about
+        };
+
+        Object.keys(fields).forEach(function (fieldName) {
+
+            const field =
+                document.querySelector(`[name="${fieldName}"]`);
+
+            if (field) {
+                field.value = fields[fieldName] || "";
+            }
+
+        });
+
+        // Existing profile image
+        if (profile.profile_image) {
+            showExistingImage(profile.profile_image);
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Could not load worker profile:",
+            error
+        );
+
+    }
+}
+
+
+function showExistingImage(imagePath) {
+
+    const imageUrl = "../../" + imagePath;
+
+    const preview =
+        document.querySelector("#profilePreview");
+
+    if (preview) {
+        preview.src = imageUrl;
+        preview.style.display = "block";
+    }
+
+    const preview2 =
+        document.querySelector(".profile-preview");
+
+    if (preview2) {
+        preview2.src = imageUrl;
+        preview2.style.display = "block";
+    }
+}
+
+const profileImage =
+    document.getElementById("profileImage");
+
+const profilePreview =
+    document.getElementById("profilePreview");
+
+if (profileImage) {
+
+    profileImage.addEventListener("change", function () {
+
+        const file = this.files[0];
+
+        if (!file) {
+            return;
+        }
+
+        if (!file.type.startsWith("image/")) {
+            alert("Please select an image file.");
+            this.value = "";
+            return;
+        }
+
+        if (file.size > 5 * 1024 * 1024) {
+            alert("Image must be less than 5MB.");
+            this.value = "";
+            return;
+        }
+
+        const imageURL =
+            URL.createObjectURL(file);
+
+        if (profilePreview) {
+            profilePreview.src = imageURL;
+            profilePreview.style.display = "block";
+        }
+
+    });
+
+}
+</script>
+
+
+</body>
+
+</html>
