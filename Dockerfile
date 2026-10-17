@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     $PHPIZE_DEPS \
     libssl-dev \
     unzip \
-    && pecl install mongodb-1.21.0 \
+    && pecl install mongodb-2.1.7 \
     && docker-php-ext-enable mongodb \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
