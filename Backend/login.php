@@ -1,8 +1,8 @@
 <?php
 
 error_reporting(E_ALL);
-ini_set("display_errors", "1");
-
+ini_set("display_errors", "0");
+ini_set("log_errors", "1");
 session_start();
 
 require_once __DIR__ . "/db.php";
@@ -38,51 +38,70 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
    GET FORM DATA
    ========================================= */
 
-$email = trim($_POST["email"] ?? "");
+        $email = trim($_POST["email"] ?? "");
 
-$password = $_POST["password"] ?? "";
-
-
-/* =========================================
-   VALIDATION
-   ========================================= */
-
-if ($email === "" || $password === "") {
-
-    loginError(
-        "Please enter your email and password."
-    );
-
-}
+        $password = $_POST["password"] ?? "";
 
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        /* =========================================
+        VALIDATION
+        ========================================= */
 
-    loginError(
-        "Please enter a valid email address."
-    );
+        if ($email === "" || $password === "") {
 
-}
+            loginError(
+                "Please enter your email and password."
+            );
 
-
-/* =========================================
-   FIND USER
-   ========================================= */
-
-try {
-
-    $user = $users->findOne([
-        "email" => $email
-    ]);
+        }
 
 
-    if (!$user) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-        loginError(
-            "Invalid email or password."
-        );
+            loginError(
+                "Please enter a valid email address."
+            );
 
-    }
+        }
+
+
+        /* =========================================
+        FIND USER
+        ========================================= */
+
+        $user = $users->findOne([
+            "email" => $email
+        ]);
+
+     
+        if (!$user) {
+            error_log("WorkOnnect login diagnostic: admin email not found in selected database.");
+            loginError("Invalid email or password.");
+        }
+
+        if (!isset($user["password"])) {
+            error_log("WorkOnnect login diagnostic: password field missing.");
+            loginError("Invalid email or password.");
+        }
+
+        if (!password_verify($password, $user["password"])) {
+            error_log("WorkOnnect login diagnostic: password verification failed.");
+            loginError("Invalid email or password.");
+        }
+ try {
+
+//     $user = $users->findOne([
+//         "email" => $email
+//     ]);
+
+
+//     if (!$user) {
+
+//         loginError(
+//             "Invalid email or password."
+//         );
+
+//     }
 
 
     /* =====================================

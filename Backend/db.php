@@ -1,24 +1,23 @@
+
 <?php
-
-error_reporting(E_ALL);
-ini_set("display_errors", "1");
-
 require_once __DIR__ . "/../vendor/autoload.php";
 
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->safeLoad();
+
 try {
+    $uri = $_ENV["MONGODB_URI"] ?? "";
+    $databaseName = $_ENV["MONGODB_DATABASE"] ?? "workonnect";
 
-    $client = new MongoDB\Client(
-        "mongodb://127.0.0.1:27017"
-    );
+    if ($uri === "") {
+        throw new RuntimeException("MONGODB_URI is missing from .env");
+    }
 
-    $database = $client->selectDatabase("workonnect");
-
+    $client = new MongoDB\Client($uri);
+    $database = $client->selectDatabase($databaseName);
     $users = $database->selectCollection("users");
 
 } catch (Throwable $e) {
-
-    die(
-        "MongoDB connection failed: " .
-        $e->getMessage()
-    );
+    error_log("MongoDB connection failed: " . $e->getMessage());
+    die("MongoDB connection failed. Please check the database configuration.");
 }
