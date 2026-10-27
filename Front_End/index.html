@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Workonnect connects customers with skilled service professionals.">
+        <title>Workonnect | Skilled Services Near You</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header class="navbar" id="siteHeader">
+            <div class="container nav-container">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">W</span>
+                    <span>Work<span>Onnect</span>
+                    </span>
+                </a>
+                <!-- <nav class="nav-menu" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/how-it-works.html" class="nav-link">How It Works</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/register.html" class="login-btn">
+                    Login
+                </a>
+                <a href="pages/register.html" class="register-btn">
+                    Get Started
+                    <span>→</span>
+                </a>
+            </nav> -->
+            <nav class="nav-menu" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/how-it-works.html" class="nav-link">How It Works</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+                <!-- <a href="pages/login.html" class="login-btn">
+                    Login
+                </a>
+                <!-- <a href="pages/register.html" class="register-btn">
+                    Get Started
+                    <span>→</span>
+                </a> -->
+                            
+                <a href="pages/login.html" class="login-btn">
+                    Login
+                </a>
+                
+                    <a href="pages/login.html" class="profile-button" aria-label="Open profile" title="Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="currentColor" class="profile-icon" >
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c.8-4 3.4-6 8-6s7.2 2 8 6"></path>
+                        </svg>
+                    </a>
+
+
+
+                  <!-- <a href="pages/login.html" class="profile-button" aria-label="Open profile" title="Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        height="25px"
+                        viewBox="0 -960 960 960"
+                        width="25px"
+                        fill="#1f1f1f">
+                        <path d="M200-246q54-53 125.5-83.5T480-360q83 0 154.5 30.5T760-246v-514H200v514Zm379-235q41-41 41-99t-41-99q-41-41-99-41t-99 41q-41 41-41 99t41 99q41 41 99 41t99-41ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm69-80h422q-44-39-99.5-59.5T480-280q-56 0-112.5 20.5T269-200Zm168.5-337.5Q420-555 420-580t17.5-42.5Q455-640 480-640t42.5 17.5Q540-605 540-580t-17.5 42.5Q505-520 480-520t-42.5-17.5ZM480-503Z"/>
+                    </svg>
+                </a> -->
+
+            </nav>
+            <button class="menu-btn" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-background-shape shape-one">
+            </div>
+            <div class="hero-background-shape shape-two">
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <div class="hero-badge">
+                        <span class="badge-dot">
+                        </span>
+                        Local Skilled Services
+                        <span class="badge-arrow">
+                        </span>
+                    </div>
+                    <h1>
+                        Find the Right
+                        <span>Skilled Worker</span>
+                        Near You
+                    </h1>
+                    <p>
+                        Workonnect helps customers find and connect
+                        with skilled professionals for their service needs.
+                    </p>
+                    <section class="worker-search-section">
+                        <div class="search-heading">
+                            <span class="search-eyebrow">FIND WORKERS</span>
+                            <h2>Who do you need?</h2>
+                        </div>
+                        <form class="worker-search" id="workerSearchForm">
+                            <div class="search-input-wrapper">
+                                <span class="search-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="11" cy="11" r="6.5">
+                                        </circle>
+                                        <path d="M16 16L21 21">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <input
+                                type="search"
+                                id="workerSearchInput"
+                                placeholder="Search workers by skill..."
+                                autocomplete="off"
+                                >
+                                <button
+                                type="button"
+                                class="search-clear"
+                                id="searchClear"
+                                aria-label="Clear search"
+                                >
+                                ×
+                            </button>
+                        </div>
+                        <button
+                        type="submit"
+                        class="worker-search-button"
+                        >
+                        <span class="button-search-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="11" cy="11" r="6.5">
+                                </circle>
+                                <path d="M16 16L21 21">
+                                </path>
+                            </svg>
+                        </span>
+                        <span>Search</span>
+                    </button>
+                </form>
+                <div class="search-suggestions" id="searchSuggestions">
+                    <span>Popular:</span>
+                    <button type="button" data-search="Electrician">
+                        Electrician
+                    </button>
+                    <button type="button" data-search="Plumber">
+                        Plumber
+                    </button>
+                    <button type="button" data-search="Carpenter">
+                        Carpenter
+                    </button>
+                    <button type="button" data-search="Painter">
+                        Painter
+                    </button>
+                </div>
+            </section>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <span>✓</span>
+                    <p>Browse Services</p>
+                </div>
+                <div class="feature-item">
+                    <span>✓</span>
+                    <p>Compare Workers</p>
+                </div>
+                <div class="feature-item">
+                    <span>✓</span>
+                    <p>Easy Booking</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual reveal">
+            <div class="visual-circle">
+            </div>
+            <div class="visual-ring ring-one">
+            </div>
+            <div class="visual-ring ring-two">
+            </div>
+            <div class="main-card">
+                <div class="card-top">
+                    <span class="card-label">
+                        Skilled Professional
+                    </span>
+                    <span class="card-menu">
+                        •••
+                    </span>
+                </div>
+                <div class="worker-avatar">
+                    <div class="avatar-background">
+                    </div>
+                    <span>👨‍🔧</span>
+                </div>
+                <div class="worker-info">
+                    <h3>
+                        Find a Worker
+                    </h3>
+                    <p>
+                        Search for professionals based
+                        on your service needs.
+                    </p>
+                    <div class="worker-status">
+                        <span>
+                        </span>
+                        Available through Workonnect
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        Service Professional
+                    </span>
+                    <span class="footer-arrow">
+                        →
+                    </span>
+                </div>
+            </div>
+            <div class="floating-card card-one">
+                <span class="floating-icon">
+                    ✓
+                </span>
+                <div>
+                    <strong>
+                        Worker Profiles
+                    </strong>
+                    <small>
+                        View service information
+                    </small>
+                </div>
+            </div>
+            <div class="floating-card card-two">
+                <span class="floating-icon">
+                    ⌕
+                </span>
+                <div>
+                    <strong>
+                        Search Services
+                    </strong>
+                    <small>
+                        Find suitable professionals
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>
+        </span>
+        Scroll to explore
+    </div>
+</section>
+<!-- <section class="services section" id="services">
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="section-label">SERVICES</span>
+            <h2>Find professionals for your <span>service needs</span>
+            </h2>
+            <p>Choose a service category to start looking for suitable workers.</p>
+        </div>
+        <div class="service-grid">
+            <div class="service-card reveal" data-search="Electrician">
+                <div class="service-icon electrician">⚡</div>
+                <div class="service-number">01</div>
+                <h3>Electrician</h3>
+                <p>Electrical repair, maintenance and installation services.</p>
+                <a href="pages/login.html">Find Workers <span>→</span>
+                </a>
+            </div>
+            <div class="service-card reveal" data-search="Plumber">
+                <div class="service-icon plumber">🔧</div>
+                <div class="service-number">02</div>
+                <h3>Plumber</h3>
+                <p>Plumbing repair and maintenance services.</p>
+                <a href="pages/login.html">Find Workers <span>→</span>
+                </a>
+            </div>
+            <div class="service-card reveal" data-search="Carpenter">
+                <div class="service-icon carpenter">🪚</div>
+                <div class="service-number">03</div>
+                <h3>Carpenter</h3>
+                <p>Furniture, woodwork and carpentry services.</p>
+                <a href="pages/login.html">Find Workers <span>→</span>
+                </a>
+            </div>
+            <div class="service-card reveal" data-search="Painter">
+                <div class="service-icon painter">🎨</div>
+                <div class="service-number">04</div>
+                <h3>Painter</h3>
+                <p>Interior, exterior and general painting services.</p>
+                <a href="pages/login.html">Find Workers <span>→</span>
+                </a>
+            </div>
+            <div class="service-card reveal" data-search="Driver">
+                <div class="service-icon driver">🚗</div>
+                <div class="service-number">05</div>
+                <h3>Driver</h3>
+                <p>Local and professional driving services.</p>
+                <a href="pages/login.html">Find Workers <span>→</span>
+                </a>
+            </div>
+            <div class="service-card reveal" data-search="Cleaner">
+                <div class="service-icon cleaner">✨</div>
+                <div class="service-number">06</div>
+                <h3>Cleaner</h3>
+                <p>Home, office and general cleaning services.</p>
+                <a href="pages/login.html">Find Workers <span>→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<section class="how-section section" id="how-it-works">
+    <div class="container">
+        <div class="section-heading reveal">
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+            <h2>
+                Simple steps to connect
+                <span>with a worker</span>
+            </h2>
+            <p>
+                Workonnect is designed to make
+                finding and booking services easier.
+            </p>
+        </div>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-number">
+                    01
+                </div>
+                <h3>
+                    Search
+                </h3>
+                <p>
+                    Search for a service and
+                    find suitable workers.
+                </p>
+            </div>
+            <div class="step-line">
+            </div>
+            <div class="step reveal">
+                <div class="step-number">
+                    02
+                </div>
+                <h3>
+                    Compare
+                </h3>
+                <p>
+                    Explore available worker
+                    profiles and service details.
+                </p>
+            </div>
+            <div class="step-line">
+            </div>
+            <div class="step reveal">
+                <div class="step-number">
+                    03
+                </div>
+                <h3>
+                    Book
+                </h3>
+                <p>
+                    Choose a suitable worker
+                    and request a service.
+                </p>
+            </div>
+            <div class="step-line">
+            </div>
+            <div class="step reveal">
+                <div class="step-number">
+                    04
+                </div>
+                <h3>
+                    Review
+                </h3>
+                <p>
+                    After completing a service,
+                    customers can provide feedback.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="benefits section" id="about">
+    <div class="container benefits-container">
+        <div class="benefits-content reveal">
+            <span class="section-label">
+                ABOUT WORKONNECT
+            </span>
+            <h2>
+                A simple way to connect
+                <span>customers and workers</span>
+            </h2>
+            <p>
+                Workonnect provides a platform where customers
+                can discover skilled professionals while workers
+                can present their services and manage requests.
+            </p>
+            <div class="benefit-list">
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>
+                            Worker Profiles
+                        </h3>
+                        <p>
+                            Customers can view information
+                            about available professionals.
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>
+                            Service Requests
+                        </h3>
+                        <p>
+                            Customers can request services
+                            through the platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <span>✓</span>
+                    <div>
+                        <h3>
+                            Booking Management
+                        </h3>
+                        <p>
+                            Workers and customers can manage
+                            their service interactions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefits-visual reveal">
+            <div class="benefit-decoration decoration-one">
+            </div>
+            <div class="benefit-decoration decoration-two">
+            </div>
+            <div class="benefit-box">
+                <div class="big-check">
+                    W
+                </div>
+                <span class="box-label">
+                    WORKONNECT
+                </span>
+                <h3>
+                    Connect. Work. Grow.
+                </h3>
+                <p>
+                    A platform designed to connect
+                    customers with skilled professionals.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <div class="cta-shape">
+    </div>
+    <div class="container cta-container reveal">
+        <div>
+            <span class="section-label">
+                GET STARTED
+            </span>
+            <h2>
+                Looking for a skilled
+                professional?
+            </h2>
+            <p>
+                Create an account and start exploring
+                services available through Workonnect.
+            </p>
+        </div>
+        <a href="pages/register.html" class="cta-btn">
+            <span>Create Account</span>
+            <span>→</span>
+        </a>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <a href="#home" class="logo">
+                <span class="logo-icon">
+                    W
+                </span>
+                <span>
+                    Work<span>Onnect</span>
+                </span>
+            </a>
+            <p>
+                Connecting customers and skilled
+                service professionals.
+            </p>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>
+                    Platform
+                </h4>
+                <a href="pages/services.html">
+                    Services
+                </a>
+                <a href="pages/how-it-works.html">
+                    How It Works
+                </a>
+                <a href="pages/about.html">
+                    About
+                </a>
+            </div>
+            <div>
+                <h4>
+                    Account
+                </h4>
+                <a href="pages/login.html">
+                    Login
+                </a>
+                <a href="pages/register.html">
+                    Register
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            © 2026 WorkOnnect. All rights reserved.
+        </p>
+    </div>
+</footer>
+<script src="assets/js/main.js">
+</script>
+</body>
+</html>

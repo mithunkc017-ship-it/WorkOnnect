@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Workers | WORKONNECT</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <style>
+            .search-page {
+            min-height: 100vh;
+            padding: 110px 7% 60px;
+            background: #fafaf5;
+            }
+            .search-header {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: center;
+            }
+            .search-header h1 {
+            color: #17252b;
+            font-size: 42px;
+            margin-bottom: 12px;
+            }
+            .search-header p {
+            color: #66767a;
+            font-size: 17px;
+            }
+            .search-box {
+            max-width: 900px;
+            margin: 0 auto 45px;
+            display: flex;
+            gap: 12px;
+            background: white;
+            padding: 12px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(23, 37, 43, 0.08);
+            }
+            .search-box input,
+            .search-box select {
+            flex: 1;
+            min-width: 0;
+            border: 1px solid #dce6e5;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 15px;
+            outline: none;
+            }
+            .search-box button {
+            border: none;
+            border-radius: 12px;
+            padding: 15px 25px;
+            background: #197487;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            }
+            .workers-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            }
+            .worker-card {
+            background: white;
+            border: 1px solid #dce6e5;
+            border-radius: 20px;
+            padding: 24px;
+            transition: 0.25s ease;
+            }
+            .worker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(23, 37, 43, 0.1);
+            }
+            .worker-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            }
+            .worker-photo {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #d9eff2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 700;
+            color: #197487;
+            }
+            .worker-info h3 {
+            margin: 0 0 5px;
+            color: #17252b;
+            }
+            .worker-info p {
+            margin: 0;
+            color: #66767a;
+            font-size: 14px;
+            }
+            .rating {
+            margin-bottom: 12px;
+            color: #17252b;
+            }
+            .worker-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            }
+            .tag {
+            background: #f1f6f5;
+            color: #197487;
+            padding: 7px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            }
+            .worker-actions {
+            display: flex;
+            gap: 10px;
+            }
+            .worker-actions a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            padding: 11px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            }
+            .view-profile {
+            background: #d9eff2;
+            color: #197487;
+            }
+            .contact-worker {
+            background: #197487;
+            color: white;
+            }
+            .no-results {
+            display: none;
+            text-align: center;
+            color: #66767a;
+            padding: 50px;
+            }
+            @media (max-width: 900px) {
+            .workers-grid {
+            grid-template-columns: repeat(2, 1fr);
+            }
+            .search-box {
+            flex-direction: column;
+            }
+            }
+            @media (max-width: 600px) {
+            .search-page {
+            padding: 90px 5% 40px;
+            }
+            .search-header h1 {
+            font-size: 32px;
+            }
+            .workers-grid {
+            grid-template-columns: 1fr;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="search-page">
+            <section class="search-header">
+                <h1>Find the Right Worker</h1>
+                <p>Search trusted professionals based on service and location.</p>
+            </section>
+            <form class="search-box" id="searchForm">
+                <input
+                type="text"
+                id="serviceSearch"
+                placeholder="What service do you need?"
+                >
+                <input
+                type="text"
+                id="locationSearch"
+                placeholder="Enter location"
+                >
+                <button type="submit">Search</button>
+            </form>
+            <section class="workers-grid" id="workersGrid">
+                <article class="worker-card">
+                    <div class="worker-top">
+                        <div class="worker-photo">RK</div>
+                        <div class="worker-info">
+                            <h3>Rahul Kumar</h3>
+                            <p>Electrician</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★ 4.9</div>
+                    <div class="worker-details">
+                        <span class="tag">5+ Years Experience</span>
+                        <span class="tag">Bengaluru</span>
+                        <span class="tag">Available</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="worker-profile.html" class="view-profile">View Profile</a>
+                        <a href="login.html" class="contact-worker">Contact</a>
+                    </div>
+                </article>
+                <article class="worker-card">
+                    <div class="worker-top">
+                        <div class="worker-photo">AS</div>
+                        <div class="worker-info">
+                            <h3>Anil Sharma</h3>
+                            <p>Plumber</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★ 4.8</div>
+                    <div class="worker-details">
+                        <span class="tag">7+ Years Experience</span>
+                        <span class="tag">Bengaluru</span>
+                        <span class="tag">Available</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="worker-profile.html" class="view-profile">View Profile</a>
+                        <a href="login.html" class="contact-worker">Contact</a>
+                    </div>
+                </article>
+                <article class="worker-card">
+                    <div class="worker-top">
+                        <div class="worker-photo">MP</div>
+                        <div class="worker-info">
+                            <h3>Manoj P</h3>
+                            <p>Carpenter</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★ 4.7</div>
+                    <div class="worker-details">
+                        <span class="tag">4+ Years Experience</span>
+                        <span class="tag">Bengaluru</span>
+                        <span class="tag">Available</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="worker-profile.html" class="view-profile">View Profile</a>
+                        <a href="login.html" class="contact-worker">Contact</a>
+                    </div>
+                </article>
+            </section>
+            <div class="no-results" id="noResults">
+                <h2>No workers found</h2>
+                <p>Try another service or location.</p>
+            </div>
+        </main>
+        <script>
+            const searchForm = document.getElementById("searchForm");
+            const serviceSearch = document.getElementById("serviceSearch");
+            const locationSearch = document.getElementById("locationSearch");
+            const workerCards = document.querySelectorAll(".worker-card");
+            const noResults = document.getElementById("noResults");
+            const params = new URLSearchParams(window.location.search);
+            const serviceFromHome = params.get("service");
+            if (serviceFromHome) {
+            serviceSearch.value = serviceFromHome;
+            }
+            searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const service = serviceSearch.value.toLowerCase().trim();
+            const location = locationSearch.value.toLowerCase().trim();
+            let found = false;
+            workerCards.forEach(function(card) {
+            const text = card.textContent.toLowerCase();
+            const serviceMatch = service === "" || text.includes(service);
+            const locationMatch = location === "" || text.includes(location);
+            if (serviceMatch && locationMatch) {
+            card.style.display = "block";
+            found = true;
+            } else {
+            card.style.display = "none";
+            }
+            });
+            noResults.style.display = found ? "none" : "block";
+            });
+        </script>
+    </body>
+</html>
