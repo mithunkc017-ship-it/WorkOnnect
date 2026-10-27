@@ -404,22 +404,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Creating..."
                 );
 
+                registerForm.submit();
+                // setTimeout(() => {
 
-                setTimeout(() => {
+                //     stopLoading(
+                //         submitButton,
+                //         "Create Account",
+                //         "↗"
+                //     );
 
-                    stopLoading(
-                        submitButton,
-                        "Create Account",
-                        "↗"
-                    );
+                //     showMessage(
+                //         message,
+                //         "Account form is ready for backend connection.",
+                //         "success"
+                //     );
 
-                    showMessage(
-                        message,
-                        "Account form is ready for backend connection.",
-                        "success"
-                    );
-
-                }, 700);
+                // }, 700);
 
             }
         );
